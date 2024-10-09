@@ -8,9 +8,11 @@ import formatCurrency from "../../utils/formatCurrency";
 function Cart() {
   const { cartItems, isCartVisible } = useContext(AppContext);
 
-  const totalPrice = cartItems.reduce((acc, item) => {
-    return item.price + acc;
-  }, 0);
+  const totalPrice = cartItems
+    .reduce((acc, item) => {
+      return item.price + acc;
+    }, 0)
+    .toFixed(2);
 
   return (
     <section className={`cart ${isCartVisible ? "cart-active" : ""}`}>
@@ -19,7 +21,11 @@ function Cart() {
           <CartItem key={cartItem.id} data={cartItem} />
         ))}
       </div>
-      <div className="cart-resume">{formatCurrency(totalPrice, "BRL")}</div>
+      {cartItems.length === 0 ? (
+        <div className="cart-empty">Seu carrinho está vazio!</div>
+      ) : (
+        <div className="cart-resume">{formatCurrency(totalPrice, "BRL")}</div>
+      )}
     </section>
   );
 }

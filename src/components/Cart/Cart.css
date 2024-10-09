@@ -19,6 +19,17 @@
   overflow: auto;
 }
 
+.cart-empty {
+  flex-grow: 1;
+  display: absolute;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  cursor: default;
+}
+
 .cart-resume {
   font-size: 1.8rem;
   font-weight: 500;

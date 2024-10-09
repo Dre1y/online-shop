@@ -5,10 +5,13 @@
   padding-bottom: 20px;
   margin-bottom: 20px;
   position: relative;
+  overflow: hidden;
 }
 
 .cart-item-image {
   width: 70px;
+  max-width: 100%;
+  height: auto;
 }
 
 .cart-item-tittle {
@@ -36,6 +39,12 @@
   border: none;
   background: none;
   cursor: pointer;
+}
+
+.button__remove-item:hover {
+  color: #ff0000;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 
 .cart-item:last-child {
