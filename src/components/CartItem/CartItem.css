@@ -37,3 +37,7 @@
   background: none;
   cursor: pointer;
 }
+
+.cart-item:last-child {
+  border-bottom: none;
+}
