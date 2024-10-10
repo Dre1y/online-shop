@@ -5,14 +5,23 @@ import "./CartButton.css";
 import AppContext from "../../context/AppContext";
 
 function CartButton() {
-  const { cartItems, isCartVisible, setIsCartVisible } = useContext(AppContext);
+  const {
+    cartItems,
+    isCartVisible,
+    setIsCartVisible,
+    isFavoritesVisible,
+    setIsFavoritesVisible,
+  } = useContext(AppContext);
+
+  const handleCartClick = () => {
+    if (isFavoritesVisible) {
+      setIsFavoritesVisible(false);
+    }
+    setIsCartVisible(!isCartVisible);
+  };
 
   return (
-    <button
-      type="button"
-      className="cart__button"
-      onClick={() => setIsCartVisible(!isCartVisible)}
-    >
+    <button type="button" className="cart__button" onClick={handleCartClick}>
       <AiOutlineShoppingCart />
       {cartItems.length > 0 && (
         <span className="cart-status">{cartItems.length}</span>

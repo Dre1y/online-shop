@@ -1,0 +1,27 @@
+.favorite-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  height: calc(50vh - 250px);
+  position: fixed;
+  bottom: 0;
+  padding: 20px 5px;
+  overflow: auto;
+  transform: translate(0, 110%);
+  transition: all 400ms ease;
+}
+
+.favorite-products-active {
+  transform: translate(0, 0);
+}
+
+.empty-favorites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #666;
+  height: 100%;
+}

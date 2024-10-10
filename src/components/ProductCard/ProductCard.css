@@ -50,10 +50,29 @@
   cursor: pointer;
 }
 
+.button__favorite-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  margin: 12px 15px;
+  color: red;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 .product-card:hover {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.product-card:hover .button__add-cart {
+.product-card:hover .button__add-cart,
+.product-card:hover .button__favorite-item {
   display: flex;
 }

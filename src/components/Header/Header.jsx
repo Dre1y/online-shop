@@ -3,6 +3,7 @@ import SearchBar from "../SearchBar/SearchBar";
 
 import "./Header.css";
 import CartButton from "../CartButton/CartButton";
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 function Header() {
   return (
@@ -10,6 +11,7 @@ function Header() {
       <div className="container">
         <SearchBar />
         <CartButton />
+        <FavoriteButton />
       </div>
     </header>
   );

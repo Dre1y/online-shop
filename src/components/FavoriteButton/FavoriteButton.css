@@ -1,0 +1,13 @@
+.favorite-button {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  margin-left: 10px;
+  color: #333;
+}

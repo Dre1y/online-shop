@@ -5,12 +5,15 @@ import "./ProductCard.css";
 import { BsFillCartPlusFill } from "react-icons/bs";
 import formatCurrency from "../../utils/formatCurrency";
 import AppContext from "../../context/AppContext";
+import { MdFavoriteBorder } from "react-icons/md";
 
 function ProductCard({ data }) {
   const { title, thumbnail, price } = data;
-  const { cartItems, setCartItems } = useContext(AppContext);
+  const { cartItems, setCartItems, favoriteItems, setFavoriteItems } =
+    useContext(AppContext);
 
   const handleAddCart = () => setCartItems([...cartItems, data]);
+  const handleFavoriteItem = () => setFavoriteItems([...favoriteItems, data]);
 
   return (
     <section className="product-card">
@@ -31,6 +34,14 @@ function ProductCard({ data }) {
         onClick={handleAddCart}
       >
         <BsFillCartPlusFill />
+      </button>
+
+      <button
+        type="button"
+        className="button__favorite-item"
+        onClick={handleFavoriteItem}
+      >
+        <MdFavoriteBorder />
       </button>
     </section>
   );

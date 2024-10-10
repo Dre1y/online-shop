@@ -10,7 +10,7 @@ function CartItem({ data }) {
   const { cartItems, setCartItems } = useContext(AppContext);
   const { id, thumbnail, title, price } = data;
 
-  const handleRemoveItem = () => {
+  const handleRemoveItemFromCart = () => {
     const updatedItems = cartItems.filter((item) => item.id != id);
     setCartItems(updatedItems);
   };
@@ -30,7 +30,7 @@ function CartItem({ data }) {
         <button
           type="button"
           className="button__remove-item"
-          onClick={handleRemoveItem}
+          onClick={handleRemoveItemFromCart}
         >
           <BsCartDashFill />
         </button>
