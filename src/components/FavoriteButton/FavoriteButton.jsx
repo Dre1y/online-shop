@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { MdOutlineFavorite } from "react-icons/md";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 import "./FavoriteButton.css";
 import AppContext from "../../context/AppContext";
@@ -25,7 +25,7 @@ function FavoriteButton() {
       className="favorite-button"
       onClick={handleFavoriteClick}
     >
-      <MdOutlineFavorite />
+      <MdOutlineFavoriteBorder />
     </button>
   );
 }

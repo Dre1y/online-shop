@@ -34,7 +34,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  color: #d83232;
+  color: #78281f;
   font-size: 1.4rem;
   border: none;
   background: none;
@@ -42,7 +42,7 @@
 }
 
 .button__remove-item:hover {
-  color: #ff0000;
+  color: #e74c3c;
   transform: scale(1.1);
   transition: all 0.3s ease;
 }

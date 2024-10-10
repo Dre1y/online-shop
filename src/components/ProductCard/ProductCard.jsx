@@ -2,10 +2,10 @@
 import React, { useContext } from "react";
 
 import "./ProductCard.css";
-import { BsFillCartPlusFill } from "react-icons/bs";
 import formatCurrency from "../../utils/formatCurrency";
 import AppContext from "../../context/AppContext";
-import { MdFavoriteBorder } from "react-icons/md";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { FaShoppingCart } from "react-icons/fa";
 
 function ProductCard({ data }) {
   const { title, thumbnail, price } = data;
@@ -33,7 +33,7 @@ function ProductCard({ data }) {
         className="button__add-cart"
         onClick={handleAddCart}
       >
-        <BsFillCartPlusFill />
+        <FaShoppingCart />
       </button>
 
       <button
@@ -41,7 +41,7 @@ function ProductCard({ data }) {
         className="button__favorite-item"
         onClick={handleFavoriteItem}
       >
-        <MdFavoriteBorder />
+        <MdOutlineFavoriteBorder />
       </button>
     </section>
   );

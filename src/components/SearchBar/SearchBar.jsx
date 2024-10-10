@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
-import { BsSearch } from "react-icons/bs";
 
 import "./SearchBar.css";
 import fetchProducts from "../../api/fetchProducts";
 import AppContext from "../../context/AppContext";
+import { IoSearch } from "react-icons/io5";
 
 function SearchBar() {
   const { setProducts, setLoading } = useContext(AppContext);
@@ -24,13 +24,13 @@ function SearchBar() {
       <input
         type="search"
         value={searchValue}
-        placeholder="Buscar produtos"
+        placeholder="Buscar"
         className="search__input"
         onChange={({ target }) => setSearchValue(target.value)}
         required
       />
       <button type="submit" className="search__button">
-        <BsSearch />
+        <IoSearch />
       </button>
     </form>
   );
