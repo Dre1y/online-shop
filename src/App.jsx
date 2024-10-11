@@ -4,6 +4,7 @@ import Produts from "./components/Products/Products";
 import Prodiver from "./context/Provider";
 import Cart from "./components/Cart/Cart";
 import FavoriteProducts from "./components/FavoriteProducts/FavoriteProducts";
+import ChatButton from "./components/ChatButton/ChatButton";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Produts />
         <FavoriteProducts />
         <Cart />
+        <ChatButton />
       </Prodiver>
     </div>
   );

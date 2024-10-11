@@ -9,6 +9,7 @@ function Prodiver({ children }) {
   const [loading, setLoading] = useState(true);
   const [isCartVisible, setIsCartVisible] = useState(false);
   const [isFavoritesVisible, setIsFavoritesVisible] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const value = {
     products,
@@ -23,6 +24,8 @@ function Prodiver({ children }) {
     setFavoriteItems,
     isFavoritesVisible,
     setIsFavoritesVisible,
+    isChatOpen,
+    setIsChatOpen,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
